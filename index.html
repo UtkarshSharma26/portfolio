@@ -10,7 +10,8 @@
   <script>
     (() => {
       const path = window.location.pathname;
-      const base = path === "/index.html" ? "/" : path.endsWith("/index.html") ? path.slice(0, -10) : path.endsWith("/") ? path : path + "/";
+      if (path.endsWith("/index.html")) return;
+      const base = path.endsWith("/") ? path : path + "/";
       window.location.replace(base + "v2/index.html");
     })();
   </script>
@@ -52,23 +53,27 @@
     .choice--featured .choice-link span{background:#d8e7ff}
     .pdf-link{display:none}
     .footer{margin-top:28px;background:rgba(255,255,255,.45);display:flex;align-items:center;justify-content:space-between;gap:20px}.footer>span,.footer>a:last-child{color:var(--muted);font:9px ui-monospace,SFMono-Regular,Menlo,monospace;text-decoration:none}.footer .brand{color:var(--ink)}.footer .brand img{width:29px;height:29px}.footer i{font-style:normal;color:var(--blue);padding:0 4px}
-    html[data-theme=dark] body{background:radial-gradient(ellipse at 89% 6%,#1e3854 0,transparent 27rem),radial-gradient(ellipse at 4% 75%,#342b30 0,transparent 24rem),var(--paper)}
+    html[data-theme=dark] body{background:radial-gradient(ellipse at 89% 6%,#1e3854 0,transparent 27rem),radial-gradient(ellipse at 4% 75%,#1b2d3e 0,transparent 24rem),var(--paper)}
     html[data-theme=dark] .topbar,html[data-theme=dark] .footer{border-color:var(--line);background:rgba(13,25,39,.8)}
     html[data-theme=dark] .topbar-note,html[data-theme=dark] .eyebrow{border-color:var(--line);background:rgba(20,35,52,.88);color:var(--ink)}
-    html[data-theme=dark] .choice:not(.choice--featured){border-color:var(--line);background:linear-gradient(145deg,#142334,#242b35)}
+    html[data-theme=dark] .choice:not(.choice--featured){border-color:var(--line);background:linear-gradient(145deg,#142334,#1b2b3d)}
     html[data-theme=dark] .choice--featured{border-color:#345678;background:linear-gradient(135deg,#122942,#1b4268)}
+    html[data-theme=dark] .choice-label{border-color:#526a82;background:#20364b;color:#e5effa}
+    html[data-theme=dark] .choice--featured .choice-label{border-color:rgba(255,255,255,.32);background:rgba(255,255,255,.1);color:#f0f6ff}
     html[data-theme=dark] .choice-link{border-color:var(--line);color:var(--ink)}
-    html[data-theme=dark] .choice-link span{background:var(--pale)}
+    html[data-theme=dark] .choice-link span{border:1px solid #526f8b;background:#1e3854;color:#edf5ff}
     html[data-theme=dark] .choice--featured .choice-link{border-color:#d5e6ff;background:#d5e6ff;color:#102943}
+    html[data-theme=dark] .choice--featured .choice-link span{border-color:#7896bc;background:#c4dcff;color:#102943}
     html[data-theme=dark] .pdf-button,html[data-theme=dark] .theme-toggle{border-color:var(--line);background:var(--surface);color:var(--ink)}
     @media(hover:hover){.choice:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(16,41,67,.14)}.choice--featured:hover{box-shadow:0 23px 52px rgba(16,41,67,.22)}}
     @media(max-width:700px){.topbar{padding:10px 18px;gap:10px}.topbar-note{display:none}.header-actions{gap:8px}.pdf-button{min-height:32px;padding-inline:11px;font-size:10px}.theme-toggle{width:32px;height:32px}.intro{padding-top:55px}.choice{min-height:270px;padding:24px}.choice:after{top:80px;right:13px;font-size:126px}.choice-label{margin-bottom:23px}.footer{padding:18px;flex-wrap:wrap;gap:12px 16px}.footer>span{order:3;width:100%}}
     @media(prefers-reduced-motion:reduce){.choice{transition:none}}
+    @media(forced-colors:active){.choice,.choice--featured{border:1px solid CanvasText;background:Canvas;color:CanvasText;box-shadow:none}.choice-label,.choice--featured .choice-label{border-color:CanvasText;background:Canvas;color:CanvasText}.choice p:not(.choice-label){color:CanvasText}.choice-link,.choice--featured .choice-link{border:1px solid LinkText;background:Canvas;color:LinkText}.choice-link span,.choice--featured .choice-link span{border:1px solid LinkText;background:Canvas;color:LinkText}.skip-link:focus,.theme-toggle:focus-visible,.pdf-button:focus-visible,.choice-link:focus-visible{outline:3px solid Highlight;outline-offset:3px}}
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to portfolio choices</a>
-  <header class="topbar" id="top"><a class="brand" href="index.html"><img src="profile.png" alt=""><span>UTKARSH SHARMA</span></a><div class="header-actions"><span class="topbar-note">PORTFOLIO</span><a class="pdf-button" href="Utkarsh_Sharma_Portfolio.pdf" download>Download PDF</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" aria-describedby="theme-hint" aria-pressed="false" title="Toggle light and dark theme"><svg class="theme-glyph-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 15.4A8.5 8.5 0 0 1 8.6 3.6 8.5 8.5 0 1 0 20.4 15.4Z"/></svg><svg class="theme-glyph-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l-1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button><span id="theme-hint" class="sr-only">Toggle between light and dark themes. The theme follows your device preference unless you save a choice.</span><span id="theme-status" class="sr-only" role="status" aria-live="polite"></span></div></header>
+  <header class="topbar" id="top"><a class="brand" href="index.html"><img src="profile.png" alt=""><span>UTKARSH SHARMA</span></a><div class="header-actions"><a class="pdf-button" href="Utkarsh_Sharma_Portfolio.pdf" download>Download PDF</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme" aria-describedby="theme-hint" aria-pressed="false" title="Toggle light and dark theme"><svg class="theme-glyph-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.4 15.4A8.5 8.5 0 0 1 8.6 3.6 8.5 8.5 0 1 0 20.4 15.4Z"/></svg><svg class="theme-glyph-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l-1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button><span id="theme-hint" class="sr-only">Toggle between light and dark themes. The theme follows your device preference unless you save a choice.</span><span id="theme-status" class="sr-only" role="status" aria-live="polite"></span></div></header>
   <main class="shell" id="main">
     <section class="intro" aria-labelledby="page-title"><p class="eyebrow">PORTFOLIO VERSIONS</p><h1 id="page-title">A little tour of <em>my work.</em></h1><p class="intro-copy">Choose the version you would like to explore. V2 is the current recruiter-focused edition; V1 keeps the original presentation.</p></section>
     <section class="choices" aria-label="Choose a portfolio version">
