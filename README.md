@@ -2,7 +2,7 @@
 
 Personal portfolio site hosted on GitHub Pages.
 
-**Live:** https://utkarshsharma26.github.io
+**Live:** [https://utkarshsharma26.github.io/portfolio](https://utkarshsharma26.github.io/portfolio)
 
 ## Setup
 

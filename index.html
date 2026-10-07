@@ -1,375 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utkarsh Sharma — Senior Software Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f7fb">
+  <meta name="description" content="Explore Utkarsh Sharma's portfolio in two presentations: the current Senior and Staff focused V2 and the original V1.">
+  <title>Utkarsh Sharma | Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root{color-scheme:light;--paper:#f4f7fb;--surface:#fff;--ink:#0b1f33;--muted:#5d7085;--line:#d8e2ec;--blue:#2f68d8;--navy:#0b1f33;--pale:#e5eefb;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--serif:Georgia,"Times New Roman",serif}
+    *{box-sizing:border-box}html{min-width:320px;background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}.skip-link{position:absolute;left:-9999px;top:8px;z-index:5;padding:9px 13px;background:#fff;color:var(--ink)}.skip-link:focus{left:16px;outline:3px solid var(--blue);outline-offset:3px}
+    .topbar{min-height:72px;padding:14px max(28px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.7)}.brand{display:flex;align-items:center;gap:11px;color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.1em;text-decoration:none}.brand img{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;object-fit:cover}.topbar-note,.eyebrow{color:var(--muted);font:500 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}
+    .shell{width:min(1050px,calc(100% - 48px));margin:0 auto}.intro{padding:82px 0 36px}.eyebrow{margin:0 0 18px;color:var(--blue)}h1{max-width:780px;margin:0;font:500 clamp(42px,7vw,72px)/1.03 var(--serif);letter-spacing:-.045em}.intro-copy{max-width:630px;margin:20px 0 0;color:var(--muted);font-size:16px;line-height:1.75}.choices{display:grid;grid-template-columns:1.12fr .88fr;gap:18px;padding-bottom:50px}.choice{min-height:300px;padding:29px 31px;display:flex;flex-direction:column;align-items:flex-start;border:1px solid var(--line);background:var(--surface)}.choice--featured{border-color:var(--navy);background:var(--navy);color:#fff}.choice-label{margin:0 0 30px;color:var(--muted);font:500 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em}.choice--featured .choice-label{color:#c2d7f2}.choice h2{margin:0;font:500 clamp(28px,4vw,40px)/1.1 var(--serif);letter-spacing:-.03em}.choice p:not(.choice-label){max-width:450px;margin:15px 0 25px;color:var(--muted);font-size:14px}.choice--featured p:not(.choice-label){color:#d3e1f1}.choice-link{min-height:45px;margin-top:auto;padding:11px 17px;display:inline-flex;align-items:center;gap:18px;border:1px solid var(--line);color:var(--ink);font-size:12px;font-weight:650;text-decoration:none}.choice-link:hover{border-color:var(--blue);color:var(--blue)}.choice--featured .choice-link{border-color:#e0ebfb;background:#e0ebfb;color:var(--navy)}.choice--featured .choice-link:hover{background:#fff;border-color:#fff}.pdf-link{padding:18px 0 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.pdf-link a{color:var(--ink);font-weight:600;text-underline-offset:3px}.footer{min-height:74px;margin-top:16px;padding:20px max(28px,calc((100vw - 1120px)/2));border-top:1px solid var(--line);color:var(--muted);font:10px ui-monospace,SFMono-Regular,Menlo,monospace}
+    a:focus-visible{outline:3px solid var(--blue);outline-offset:4px}@media(max-width:700px){.topbar{min-height:62px;padding:10px 20px}.topbar-note{font-size:8px}.shell{width:min(100% - 36px,560px)}.intro{padding:58px 0 28px}.choices{grid-template-columns:1fr}.choice{min-height:255px;padding:24px}.choice-label{margin-bottom:23px}.footer{padding:18px 20px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+    :root{--paper:#f8f7f2;--line:#dce3ec;--blue:#3569d4;--coral:#e7835f;--navy:#102943}
+    body{background:radial-gradient(ellipse at 89% 6%,#e8efff 0,transparent 27rem),radial-gradient(ellipse at 4% 75%,#fff0df 0,transparent 24rem),var(--paper)}
+    .topbar{position:relative;border-bottom-color:rgba(16,41,67,.1);background:rgba(255,255,255,.58);backdrop-filter:blur(12px)}
+    .topbar-note{padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.8);color:var(--ink)}
+    .intro{padding-top:73px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.8);color:var(--ink)}
+    .eyebrow:before{width:7px;height:7px;border-radius:50%;background:var(--coral);content:""}
+    h1{font-family:var(--sans);font-weight:650;letter-spacing:-.065em}
+    h1 em{color:var(--blue);font-family:var(--serif);font-weight:400;letter-spacing:-.045em}
+    .intro-copy{max-width:590px;font-size:15px}
+    .choices{gap:20px}
+    .choice{position:relative;min-height:315px;padding:30px;overflow:hidden;border-radius:18px;box-shadow:0 16px 40px rgba(16,41,67,.08);transition:transform .18s ease,box-shadow .18s ease}
+    .choice:after{position:absolute;top:76px;right:15px;color:var(--blue);font:700 152px/.8 var(--sans);letter-spacing:-.12em;opacity:.055;pointer-events:none;content:"01"}
+    .choice--featured{border-color:#21466d;background:linear-gradient(135deg,#102943,#1c4c78);box-shadow:0 18px 44px rgba(16,41,67,.16)}
+    .choice--featured:after{color:#fff;content:"02";opacity:.08}
+    .choice:not(.choice--featured){border-color:#ecdcca;background:linear-gradient(145deg,#fffefa,#fff1df)}
+    .choice-label{position:relative;z-index:1;margin-bottom:28px;padding:6px 10px;border:1px solid rgba(16,41,67,.12);border-radius:999px;background:rgba(255,255,255,.75);font-size:9px}
+    .choice--featured .choice-label{border-color:rgba(255,255,255,.26);background:rgba(255,255,255,.1);color:#e2efff}
+    .choice h2,.choice p:not(.choice-label),.choice-link{position:relative;z-index:1}
+    .choice h2{font-weight:600}
+    .choice p:not(.choice-label){max-width:385px;font-size:13px}
+    .choice--featured p:not(.choice-label){color:#e0ebf8}
+    .choice-link{min-height:44px;padding:10px 14px;border-radius:999px;gap:12px;font-size:11px}
+    .choice-link span{display:grid;width:22px;height:22px;place-items:center;border-radius:50%;background:var(--pale);font-size:14px}
+    .choice--featured .choice-link{border-color:#edf4ff;background:#edf4ff}
+    .choice--featured .choice-link span{background:#d8e7ff}
+    .pdf-link{margin-top:4px;padding-top:20px}
+    .pdf-link a{color:var(--blue)}
+    .footer{margin-top:28px;background:rgba(255,255,255,.45)}
+    @media(hover:hover){.choice:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(16,41,67,.14)}.choice--featured:hover{box-shadow:0 23px 52px rgba(16,41,67,.22)}}
+    @media(max-width:700px){.intro{padding-top:55px}.choice{min-height:270px;padding:24px}.choice:after{top:80px;right:13px;font-size:126px}.choice-label{margin-bottom:23px}}
+    @media(prefers-reduced-motion:reduce){.choice{transition:none}}
+  </style>
 </head>
-<body class="light">
-
-  <button class="theme-toggle" id="themeToggle" title="Toggle theme">
-    <span class="icon-moon">🌙</span>
-    <span class="icon-sun">☀️</span>
-  </button>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="avatar-wrap">
-          <img class="avatar" src="Utkarsh_Sharma.png" alt="Utkarsh Sharma" />
-        </div>
-        <div class="hero-text">
-          <h1>Utkarsh Sharma</h1>
-          <p class="title">Senior Software Engineer · Distributed Systems &amp; AI</p>
-          <p class="location">📍 Gurugram · Open to Bengaluru &amp; Remote</p>
-          <div class="contact-links">
-            <a href="tel:+918947940671">📞 +91-89479-40671</a>
-            <a href="mailto:utkarsh.sharma26@hotmail.com">
-              <img src="https://www.google.com/s2/favicons?domain=outlook.com&sz=16" alt="Email" width="13" height="13" class="contact-icon" />Email
-            </a>
-            <a href="https://www.linkedin.com/in/utkarshsharma26" target="_blank">
-              <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" width="13" height="13" class="contact-icon" />LinkedIn
-            </a>
-            <a href="https://github.com/utkarshsharma26" target="_blank">
-              <img src="https://github.com/favicon.ico" alt="GitHub" width="13" height="13" class="contact-icon" />GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <!-- Summary -->
-    <div class="summary">
-      Senior Backend Engineer with <strong>7+ years</strong> architecting distributed systems, cloud-native microservices, and AI-integrated platforms at enterprise scale. Proven track record delivering measurable outcomes — from <strong>95% reduction in manual workflows</strong> via agentic AI to <strong>50K+ concurrent request handling</strong> through horizontal scaling and partitioning. Hands-on across the full stack: <strong>Java · Spring Boot · Kafka · Azure/AWS</strong> — with direct ownership from HLD/LLD authorship through DRI on-call.
-    </div>
-
-    <!-- Stats -->
-    <section class="stats-bar">
-      <div class="stat">
-        <span class="stat-num">7+</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">50K+</span>
-        <span class="stat-label">Concurrent Requests</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">99.9%</span>
-        <span class="stat-label">Service Availability</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">95%</span>
-        <span class="stat-label">Manual Work Cut via AI</span>
-      </div>
+<body>
+  <a class="skip-link" href="#main">Skip to portfolio choices</a>
+  <header class="topbar"><a class="brand" href="index.html"><img src="profile.png" alt=""><span>UTKARSH SHARMA</span></a><span class="topbar-note">PORTFOLIO</span></header>
+  <main class="shell" id="main">
+    <section class="intro" aria-labelledby="page-title"><p class="eyebrow">PORTFOLIO VERSIONS</p><h1 id="page-title">A little tour of <em>my work.</em></h1><p class="intro-copy">Choose the version you would like to explore. V2 is the current recruiter-focused edition; V1 keeps the original presentation.</p></section>
+    <section class="choices" aria-label="Choose a portfolio version">
+      <article class="choice choice--featured" aria-labelledby="v2-title"><p class="choice-label">CURRENT EDITION&nbsp; / &nbsp;FEATURED</p><h2 id="v2-title">V2 · Senior &amp; Staff</h2><p>An updated, outcome-led view for Senior and Staff roles, focused on distributed systems, production ownership, and applied AI.</p><a class="choice-link" href="v2/index.html">Take a look at V2 <span aria-hidden="true">&#8594;</span></a></article>
+      <article class="choice" aria-labelledby="v1-title"><p class="choice-label">ORIGINAL PRESENTATION</p><h2 id="v1-title">V1 · Original</h2><p>The original portfolio presentation, retained as an alternate view of my experience and technical work.</p><a class="choice-link" href="v1/index.html">Take a look at V1 <span aria-hidden="true">&#8594;</span></a></article>
     </section>
-
-    <!-- Core Expertise Pillars -->
-    <section class="section">
-      <h2 class="section-title">Core Expertise</h2>
-      <div class="pillars">
-        <div class="pillar">
-          <div class="pillar-icon">🏗️</div>
-          <h3>Distributed Systems Design</h3>
-          <p>Horizontal scaling, partition strategies, leader election, circuit breakers, and retry semantics — across Kafka, Couchbase, and cloud-native services at production scale.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">🤖</div>
-          <h3>AI Integration &amp; Agentic Engineering</h3>
-          <p>Builds production AI agents and LLM-powered extraction pipelines using Azure OpenAI and prompt engineering — reliable, auditable, and fully integrated into enterprise workflows.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">⚡</div>
-          <h3>Performance Engineering</h3>
-          <p>Identifies and resolves latency and throughput bottlenecks through multi-level caching, SQL optimization, load balancing, and observability — with quantified impact on live traffic.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">📐</div>
-          <h3>Architecture Ownership</h3>
-          <p>Authors HLD/LLD, defines request lifecycles and interface boundaries, then operates as DRI on global on-call — full end-to-end ownership expected at senior level.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="section">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="skills-grid">
-
-        <div class="skill-group">
-          <h3>Languages &amp; Core</h3>
-          <div class="tags">
-            <span class="tag star">Java</span>
-            <span class="tag star">Spring Boot</span>
-            <span class="tag star">SQL</span>
-            <span class="tag">Dropwizard</span>
-            <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3>Messaging &amp; Data</h3>
-          <div class="tags">
-            <span class="tag star">Apache Kafka</span>
-            <span class="tag star">MongoDB</span>
-            <span class="tag star">Redis</span>
-            <span class="tag star">Couchbase</span>
-            <span class="tag">MS SQL</span>
-            <span class="tag">RabbitMQ</span>
-            <span class="tag">Apache Camel</span>
-            <span class="tag">Firebase</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3>AI &amp; Developer Productivity</h3>
-          <div class="tags">
-            <span class="tag star">Agentic AI</span>
-            <span class="tag star">Prompt Engineering</span>
-            <span class="tag star">Azure OpenAI</span>
-            <span class="tag star">GitHub Copilot</span>
-            <span class="tag star">Claude</span>
-            <span class="tag">MCP</span>
-            <span class="tag">ChatGPT</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3>Expertise</h3>
-          <div class="tags">
-            <span class="tag star">Distributed Systems</span>
-            <span class="tag star">Microservices</span>
-            <span class="tag star">HLD / LLD</span>
-            <span class="tag star">GraphQL</span>
-            <span class="tag">SRE</span>
-            <span class="tag">ELK Stack</span>
-            <span class="tag">Performance Tuning</span>
-            <span class="tag">Observability</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <h3>Cloud &amp; Infrastructure</h3>
-          <div class="tags">
-            <span class="tag star">AWS</span>
-            <span class="tag star">Jenkins</span>
-            <span class="tag star">Kubernetes</span>
-            <span class="tag">Microsoft Azure</span>
-            <span class="tag">Docker</span>
-            <span class="tag">CI/CD</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-
-        <!-- Cvent SSE -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="company">Cvent</h3>
-              <p class="role">Senior Software Engineer</p>
-            </div>
-            <span class="badge badge-green">Mar 2025 – Present</span>
-          </div>
-          <ul class="achievements">
-            <li>
-              <span class="highlight">95% reduction in manual data entry</span> — designed and shipped an end-to-end agentic AI pipeline for global train station mapping, owning the full lifecycle from prompt engineering and workflow orchestration to validation and deployment, while guaranteeing 100% consistency across production datasets.
-            </li>
-            <li>
-              <span class="highlight">70% lift in feature adoption</span> — architected an Azure OpenAI-powered document extraction service from scratch, designing prompts, validation flows, and integration contracts that fully eliminated previously manual processing workflows.
-            </li>
-            <li>
-              Authored end-to-end <strong>HLD and LLD</strong> for Train Travel platform components, defining request lifecycle contracts and interface boundaries that served as the production blueprint for multi-team delivery.
-            </li>
-            <li>
-              Engineered modular, horizontally scalable data services supporting <strong>50K+ concurrent requests</strong> with 25% throughput improvement — applying partition-aware load balancing, retry semantics, and fault isolation patterns at the architecture level.
-            </li>
-            <li>
-              Owned global enterprise on-call as <strong>Designated Responsible Individual (DRI)</strong>, maintaining <strong>99.9% service availability</strong> across mission-critical travel infrastructure serving enterprise customers worldwide.
-            </li>
-            <li>
-              Led decomposition of legacy <strong>.NET monoliths into Java/Dropwizard microservices</strong>, embedding circuit breakers, leader election, and retry semantics — improving fault tolerance by 20% and enabling independent scaling per service boundary.
-            </li>
-            <li>
-              Integrated AI coding assistants (GitHub Copilot, Claude) into team engineering workflows, accelerating PR cycle time and standardizing documentation quality across service teams.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Cvent SWE II -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="company">Cvent</h3>
-              <p class="role">Software Engineer II</p>
-            </div>
-            <span class="badge">Apr 2022 – Mar 2025</span>
-          </div>
-          <ul class="achievements">
-            <li>
-              Built a high-throughput <strong>Data Sync Consumer</strong> ingesting <strong>10M+ records</strong> using Couchbase and XML mappers, achieving 100% reliability for audit log completeness — zero data loss across all production traffic.
-            </li>
-            <li>
-              <span class="highlight">15% reduction in API latency</span> for high-traffic air and hotel booking services through multi-level caching strategy and targeted SQL query optimization — directly improving response times for time-sensitive travel inventory operations.
-            </li>
-            <li>
-              Designed and delivered low-latency <strong>GraphQL/Apollo services</strong> for real-time travel inventory management, sustaining high concurrency under production load with sub-second response targets.
-            </li>
-            <li>
-              <span class="highlight">30% MTTD reduction</span> — wired external travel API signals into automated observability pipelines, enabling proactive alerting on third-party failures before customer impact.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Petro IT Senior -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="company">Petro IT</h3>
-              <p class="role">Senior Associate Software Developer</p>
-            </div>
-            <span class="badge">Nov 2021 – Apr 2022</span>
-          </div>
-          <ul class="achievements">
-            <li>
-              Built a <strong>CNN-based document classification system</strong> in Python/Keras achieving 90%+ accuracy — replacing a manual document triage process and enabling automated downstream routing.
-            </li>
-            <li>
-              Led migration of on-prem <strong>MongoDB clusters to AWS</strong>, reducing infrastructure costs by 15% while increasing storage scalability.
-            </li>
-            <li>
-              Automated deployment pipelines using <strong>Jenkins</strong> and Shell scripting, cutting manual deployment effort by 40% and enabling consistent, repeatable releases across environments.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Petro IT Associate -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="company">Petro IT</h3>
-              <p class="role">Associate Software Developer</p>
-            </div>
-            <span class="badge">Apr 2019 – Nov 2021</span>
-          </div>
-          <ul class="achievements">
-            <li>
-              Designed event-driven distributed systems using <strong>Spring Boot + Kafka</strong> processing pipelines exceeding <strong>1M daily events</strong>.
-            </li>
-            <li>
-              Designed fault-tolerant bidirectional data sync between Firebase and MongoDB, eliminating consistency gaps that had previously caused cross-platform data discrepancies.
-            </li>
-            <li>
-              Implemented <strong>ELK Stack</strong> observability across distributed services, reducing system downtime by 25% through faster root cause identification and proactive alerting.
-            </li>
-          </ul>
-        </div>
-
-        <!-- Petro IT Android -->
-        <div class="timeline-item">
-          <div class="timeline-header">
-            <div>
-              <h3 class="company">Petro IT</h3>
-              <p class="role">Android Developer</p>
-            </div>
-            <span class="badge">Dec 2018 – Apr 2019</span>
-          </div>
-          <ul class="achievements">
-            <li>
-              Developed <strong>'Pipetrak'</strong> mobile app using React Native, Java, and Firebase to capture and sync field data via REST APIs — 100% data availability for end users.
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section class="section">
-      <h2 class="section-title">Certifications</h2>
-      <div class="cert-grid">
-        <div class="cert-card">
-          <div class="cert-icon">☁️</div>
-          <div>
-            <h3>Microsoft Azure Cloud Architect</h3>
-            <p>Deployment, Scalability, Scale-out Architecture &amp; Cloud Security</p>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">🤖</div>
-          <div>
-            <h3>Machine Learning</h3>
-            <p>Stanford University · Python, NumPy, Scikit-learn</p>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">🐳</div>
-          <div>
-            <h3>Cloud Native Computing Fundamentals</h3>
-            <p>openSUSE · Kubernetes, Prometheus, CNCF Technologies</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section class="section">
-      <h2 class="section-title">Education</h2>
-      <div class="edu-grid">
-        <div class="edu-card">
-          <div class="edu-info">
-            <h3>B.Tech in Computer Science &amp; Engineering</h3>
-            <p>SRM Institute of Science and Technology</p>
-          </div>
-          <div class="edu-meta">
-            <span class="badge">2015 – 2019</span>
-            <span class="gpa">GPA 8.9 / 10</span>
-          </div>
-        </div>
-        <div class="edu-card">
-          <div class="edu-info">
-            <h3>AISSCE (Grade XII)</h3>
-            <p>Modern School</p>
-          </div>
-          <div class="edu-meta">
-            <span class="badge">2015</span>
-            <span class="gpa">93%</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <p class="pdf-link">Prefer a document? <a href="Utkarsh_Sharma_Portfolio.pdf" download>Download the combined portfolio PDF</a>.</p>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
-    </div>
-  </footer>
-
-  <script>
-    const btn = document.getElementById('themeToggle');
-    const saved = localStorage.getItem('theme');
-    if (saved) document.body.className = saved;
-    btn.addEventListener('click', () => {
-      const next = document.body.classList.contains('light') ? 'dark' : 'light';
-      document.body.className = next;
-      localStorage.setItem('theme', next);
-    });
-  </script>
+  <footer class="footer">UTKARSH SHARMA&nbsp; / &nbsp;PORTFOLIO&nbsp; / &nbsp;BENGALURU</footer>
 </body>
 </html>
