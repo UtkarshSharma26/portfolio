@@ -6,6 +6,13 @@
   <meta name="theme-color" content="#f4f7fb">
   <meta name="description" content="Explore Utkarsh Sharma's portfolio in two presentations: the current Senior and Staff focused V2 and the original V1.">
   <title>Utkarsh Sharma | Portfolio</title>
+  <script>
+    (() => {
+      const path = window.location.pathname;
+      const base = path === "/index.html" ? "/" : path.endsWith("/index.html") ? path.slice(0, -10) : path.endsWith("/") ? path : path + "/";
+      window.location.replace(base + "v2/index.html");
+    })();
+  </script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
     :root{color-scheme:light;--paper:#f4f7fb;--surface:#fff;--ink:#0b1f33;--muted:#5d7085;--line:#d8e2ec;--blue:#2f68d8;--navy:#0b1f33;--pale:#e5eefb;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;--serif:Georgia,"Times New Roman",serif}
